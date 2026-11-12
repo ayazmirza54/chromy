@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Tab</title>
+    <link rel="icon" href="assets/icons/icon48.png" />
+    <script src="js/boot.js"></script>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="wall" aria-hidden="true">
+      <canvas id="gl"></canvas>
+      <video id="wall-video" muted loop playsinline hidden></video>
+      <img id="wall-img" alt="" hidden />
+      <canvas id="fx"></canvas>
+      <div id="veil"></div>
+    </div>
+    <div id="shade" aria-hidden="true"></div>
+
+    <main id="ui">
+      <header class="corner top-left">
+        <div id="theme-pill" class="pill">
+          <button class="icon-btn sm" data-dir="-1" aria-label="Previous theme"></button>
+          <button id="theme-name" class="pill-label" title="Open wallpaper gallery"></button>
+          <button class="icon-btn sm" data-dir="1" aria-label="Next theme"></button>
+        </div>
+      </header>
+
+      <header class="corner top-right">
+        <button id="weather" class="weather" hidden></button>
+      </header>
+
+      <section id="center">
+        <div id="clock" class="clock" aria-live="off"></div>
+        <div id="date" class="date"></div>
+        <h1 id="greeting" class="greeting"></h1>
+        <div id="focus" class="focus"></div>
+        <form id="search" class="search glass" role="search" autocomplete="off">
+          <span class="search-icon"></span>
+          <input id="search-input" type="text" placeholder="Search the web or type a URL" aria-label="Search" spellcheck="false" />
+          <kbd>/</kbd>
+        </form>
+        <nav id="links" class="links" aria-label="Quick links"></nav>
+      </section>
+
+      <footer class="corner bottom-left">
+        <button id="open-settings" class="icon-btn glass" aria-label="Settings" title="Settings (,)"></button>
+      </footer>
+
+      <footer class="corner bottom-center">
+        <button id="quote" class="quote" title="Another quote"></button>
+      </footer>
+
+      <footer class="corner bottom-right">
+        <div id="todo-pop" class="popover glass" hidden></div>
+        <button id="open-todo" class="chip glass" aria-expanded="false"></button>
+      </footer>
+    </main>
+
+    <aside id="settings" class="settings glass" aria-label="Settings" hidden></aside>
+    <div id="drop-hint" class="drop-hint" hidden><div>Drop to set as wallpaper</div></div>
+    <div id="toast" class="toast glass" role="status" hidden></div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

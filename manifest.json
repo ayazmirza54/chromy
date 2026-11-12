@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Chromy — Live New Tab",
+  "short_name": "Chromy",
+  "version": "1.0.0",
+  "description": "A stunning new tab dashboard with GPU-rendered live themes, animated custom wallpapers, clock, focus, links, weather and to-dos.",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["search", "topSites", "favicon"]
+}
